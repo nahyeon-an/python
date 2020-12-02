@@ -7,5 +7,6 @@ study python
 ## 2. 내장 함수
 
 ## 3. 라이브러리
+- pandas
 
 ## 4. python project
