@@ -3,6 +3,7 @@ study python
 
 ## 1. python 문법
 - class
+- module
 
 ## 2. 내장 함수
 
