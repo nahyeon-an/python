@@ -1,5 +1,5 @@
 # python
-study python
+I study PYTHON !
 
 ## 1. python 문법
 - Class
