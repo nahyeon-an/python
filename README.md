@@ -4,6 +4,7 @@ study python
 ## 1. python 문법
 - Class
 - Module
+- Exception
 
 ## 2. 표준 라이브러리
 
