@@ -2,12 +2,13 @@
 study python
 
 ## 1. python 문법
-- class
-- module
+- Class
+- Module
 
-## 2. 내장 함수
+## 2. 표준 라이브러리
 
-## 3. 라이브러리
-- pandas
+## 3. 모듈
+- Pandas
+- re (regular expression)
 
 ## 4. python project
