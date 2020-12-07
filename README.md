@@ -8,9 +8,10 @@ I study PYTHON !
 - Input/Output
 
 ## 2. 표준 라이브러리
+- str
 
 ## 3. 모듈
-- Pandas
+- pandas
 - re (regular expression)
 
 ## 4. python project
