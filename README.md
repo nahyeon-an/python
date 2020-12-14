@@ -13,6 +13,8 @@ I study PYTHON !
 
 ## 2. 표준 라이브러리
 - str
+- os-module
+- urllib
 
 <br>
 
