@@ -21,6 +21,8 @@ I study PYTHON !
 ## 3. 모듈
 - pandas
 - re (regular expression)
+- bs4
+- numpy
 
 <br>
 
