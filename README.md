@@ -26,4 +26,12 @@ I study PYTHON !
 
 <br>
 
-## 4. python project
+## 4. Scrapy
+
+<br>
+
+## 5. Machine Learning
+
+<br>
+
+## 6. python project
