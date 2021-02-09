@@ -28,6 +28,9 @@ I study PYTHON !
 
 ## 4. Scrapy
 1. Scarpy **프로젝트 만들기**  
+```
+scrapy startproject tutorial
+```
 2. 웹에서 **데이터를 추출**하는 Spider 구현  
 3. 명령행 도구를 사용해 추출된 데이터를 **저장**  
 4. **여러 개의 링크**를 이어서 크롤링하는 Spider 구현  
