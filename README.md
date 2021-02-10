@@ -40,7 +40,6 @@ scrapy genspider {spider name} {url}
 - o : 기존 파일 뒤에 이어서 저장(.jl 파일로 저장하는 것이 편리함)  
 ```
 scrapy crawl {spider name} -O {filename}.jl
-
 ```
 4. **여러 개의 링크**를 이어서 크롤링하는 Spider 구현  
 5. Spider **전달인자** 사용  
