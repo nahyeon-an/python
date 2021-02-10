@@ -29,7 +29,7 @@ I study PYTHON !
 ## 4. Scrapy
 1. Scarpy **프로젝트 만들기**  
 ```
-scrapy startproject tutorial
+scrapy startproject {project name}
 ```
 2. 웹에서 **데이터를 추출**하는 Spider 구현  
 ```
@@ -52,6 +52,12 @@ scrapy crawl {spider name} -a {attr.name}={attr.val}
 <br>
 
 ## 5. Machine Learning
+*(sklearn 패키지 학습)*  
+1. Preprocessing, Visualization  
+2. Split dataset into train and test  
+3. Model training/learning  
+4. Score, Evaluate model  
+5. Predict  
 
 <br>
 
