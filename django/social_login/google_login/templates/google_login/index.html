@@ -1,0 +1,20 @@
+{% load socialaccount %}
+{% providers_media_js %}
+<html>
+    <head>
+        <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <title>Google Registration</title>
+    <body>
+        <h1>{{ user.username }}</h1>
+        <h2>{{ user.email }}</h2>
+        <h2>{{ user.id }}</h2>
+        <h2>{{ user.is_authenticated }}</h2>
+        <h2>{{ user.userinfo.email }}</h2>
+
+        <br>
+        <a href="{% provider_login_url 'google' %}">Google Connect<br></a>
+        <a href="{% provider_login_url 'naver' %}">Naver Connect<br></a>
+        <a href="{% provider_login_url 'kakao' %}">Kakao Connect<br></a>
+    </body>
+</html>

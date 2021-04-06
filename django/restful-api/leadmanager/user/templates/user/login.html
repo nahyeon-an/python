@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+{% static 'user/img/naver_login_green.PNG' as naver_btn %}
+{% static 'user/img/naver_login_white.PNG' as naver_btn_hover %}
+<div>
+    <div>
+        로그인하기
+    </div>
+    <div>
+        <div class="left">
+            <!-- naverLogin() 함수 : 네이버 인증페이지로 화면 이동 후 사용자 권한을 받는 기능 -->
+            <a href="#" onclick="naverLogin()">
+                <img src="{{ naver_btn }}"
+                    onmouseover="this.src='{{ naver_btn_hover }}'"
+                    onmouseleave="this.src='{{ naver_btn }}'" height="34" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'user/js/social_login.js' %}"></script>
+
+</body>
+</html>
