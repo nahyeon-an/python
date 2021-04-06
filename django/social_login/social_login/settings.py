@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.naver',
     'allauth.socialaccount.providers.kakao',
     'google_login.apps.GoogleLoginConfig',
+    'customuser.apps.CustomUserConfig',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,5 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
     'https://www.googleapis.com/auth/userinfo.email',
     'https://www.googleapis.com/auth/userinfo.profile',
 ]
+
+AUTH_USER_MODEL = 'customuser.MyUser'
