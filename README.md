@@ -8,13 +8,16 @@ I study PYTHON !
 - Module
 - Exception
 - Input/Output
+- Function Arguments : *args, **kwargs
 
 <br>
 
 ## 2. 표준 라이브러리
-- str
-- os-module
-- urllib
+- str  
+- os-module  
+- urllib  
+- datetime  
+- daemon sleep : time.sleep(), threading
 
 <br>
 
@@ -23,6 +26,7 @@ I study PYTHON !
 - re (regular expression)
 - bs4
 - numpy
+- pycryptodomex (AES encrypt/decrypt)
 
 <br>
 
@@ -50,7 +54,14 @@ scrapy crawl {spider name} -a {attr.name}={attr.val}
 
 <br>
 
-## 5. Machine Learning
+## 5. Django
+- django-programming : 책 '파이썬 웹 프로그래밍'을 따라 만든 웹  
+- resful-api : rest-framework를 이용한 rest api 구축 연습  
+- social_login : allauth를 이용한 social login 개발 연습 
+
+<br>
+
+## 6. Machine Learning
 *(sklearn 패키지 학습)*  
 1. Preprocessing, Visualization  
 2. Split dataset into train and test  
@@ -60,4 +71,20 @@ scrapy crawl {spider name} -a {attr.name}={attr.val}
 
 <br>
 
-## 6. python project
+## 6-1. Keras
+
+<br>
+
+## 7. PySpark
+- rdd-operations : 기본 tranformation/action rdd 연산 
+
+<br>
+
+## 8. python project
+- **collector**
+    - 하루에 한 번 특정 시간에 수집을 시도하는 배치형 데몬 프로그램  
+    - Threading, bs4, Selenium  
+    ```
+    # nohup 없이 실행하면 터미널 종료 시 프로그램도 종료됨  
+    nohup python jkcrawlerd.py &
+    ```
