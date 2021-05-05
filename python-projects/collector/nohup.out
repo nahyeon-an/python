@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "iccrawlerd.py", line 73, in <module>
-    time.sleep(10)
-KeyboardInterrupt
