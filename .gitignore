@@ -9,3 +9,6 @@ django-ecommerce/
 test/
 db.sqlite3
 nohup.out
+jobkorea/
+output/
+*.pem
