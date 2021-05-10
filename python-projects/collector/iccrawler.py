@@ -6,8 +6,8 @@ import requests
 class IncruitCrawler:
 
     def __init__(self, chromedriver):
-        self.id = "incruit id"
-        self.pw = "incruit pw"
+        self.id = ""
+        self.pw = ""
         self.chromedriver = chromedriver
 
         self.options = webdriver.ChromeOptions()

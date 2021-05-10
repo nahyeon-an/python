@@ -18,6 +18,7 @@ class JobKoreaCrawler:
         self.options.add_argument('disable-gpu')
         self.options.add_argument('lang=ko_KR')
         self.driver = webdriver.Chrome(self.chromedriver, options=self.options)
+        # self.driver = webdriver.Chrome(self.chromedriver)
 
         self.req_url = "https://www.jobkorea.co.kr"
 
@@ -34,24 +35,31 @@ class JobKoreaCrawler:
         self.driver.switch_to.window(self.driver.window_handles[-1])
         time.sleep(1)
 
-        id_element = self.driver.find_element_by_id('id')
-        id_element.click()
-        time.sleep(1)
-        pyperclip.copy(self.id)
-        if self.os_option == 'm':
-            id_element.send_keys(Keys.COMMAND, 'v')
-        elif self.os_option == 'w':
-            id_element.send_keys(Keys.CONTROL, 'v')
+        # id_element = self.driver.find_element_by_id('id')
+        # id_element.click()
+        # time.sleep(1)
+        # pyperclip.copy(self.id)
+        # if self.os_option == 'm':
+        #     id_element.send_keys(Keys.COMMAND, 'v')
+        # elif self.os_option == 'w':
+        #     id_element.send_keys(Keys.CONTROL, 'v')
+        # time.sleep(1)
+
+        self.driver.execute_script("document.getElementsByName('id')[0].value=\'" + self.id +"\'")
         time.sleep(1)
 
-        pw_element = self.driver.find_element_by_id('pw')
-        pw_element.click()
-        time.sleep(1)
-        pyperclip.copy(self.pw)
-        if self.os_option == 'm':
-            pw_element.send_keys(Keys.COMMAND, 'v')
-        elif self.os_option == 'w':
-            pw_element.send_keys(Keys.CONTROL, 'v')
+        # pw_element = self.driver.find_element_by_id('pw')
+        # pw_element.click()
+        # time.sleep(1)
+        # pyperclip.copy(self.pw)
+        # if self.os_option == 'm':
+        #     pw_element.send_keys(Keys.COMMAND, 'v')
+        # elif self.os_option == 'w':
+        #     pw_element.send_keys(Keys.CONTROL, 'v')
+        # time.sleep(1)
+
+        self.driver.execute_script("document.getElementsByName('pw')[0].value=\'" + self.pw + "\'")
+
         time.sleep(1)
 
         self.driver.find_element_by_xpath("//input[@id='log.login']").click()
@@ -78,7 +86,9 @@ class JobKoreaCrawler:
         self.first_page = self.driver.page_source
         soup = BeautifulSoup(self.first_page, 'html.parser')
 
-        todayTotal = soup.select("#container > div.stContainer > div:nth-child(4) > h4 > span:nth-child(2)")[0]
+        temp = soup.select("#container > div.stContainer > div.stTopWrap")[1]
+        todayTotal = temp.select("h4 > span")[1]
+
         nums = "".join(re.findall("\d+", todayTotal.contents[0]))
         self.todayTotal = int(nums)
 
@@ -88,6 +98,7 @@ class JobKoreaCrawler:
         """
         cnt 개수 만큼의 자소서를 위에서부터 크롤링하여 텍스트 내용을 리스트로 반환
         """
+
         if self.first_page is None:
             self.first_page = self.driver.page_source
 

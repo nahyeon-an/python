@@ -1,4 +1,5 @@
 import threading
+import subprocess
 import sys
 import time
 import datetime as dt
@@ -18,11 +19,11 @@ class CrawlingThread(object):
 
     def run(self):
         while True:
-            jk_crawler = JobKoreaCrawler("naver id", "naver pw", "m or w", "chromedriver path")
-
             cnt = 0
             while cnt < 1:
                 try:
+                    jk_crawler = JobKoreaCrawler("naver id", "naver pw", "m",
+                                                 "chromedriver")
                     self.newTotal = jk_crawler.get_resume_num()
                     cnt += 1
                 except:
@@ -44,6 +45,8 @@ class CrawlingThread(object):
                     f = open(self.save_path + filename, "wt")
                     f.write(letters[i])
                     f.close()
+                    
+                    # subprocess.call(['scp', '-i', '~/job4.pem', self.save_path + filename, "ec2-user@13.124.236.54:/home/ec2-user/spooldir/"])
 
             elif self.diff == 0:
                 jk_crawler.close()
@@ -65,7 +68,6 @@ class CrawlingThread(object):
 
 
 if __name__ == '__main__':
-    # usage : nohup python jkcrawlerd.py {naver id} {naver pw} {saving path} {chromedriver path}
     saving = "test/"
     crawler = CrawlingThread(saving)
 

@@ -1,4 +1,5 @@
 import threading
+import subprocess
 import sys
 import time
 import datetime as dt
@@ -18,11 +19,12 @@ class CrawlingThread(object):
 
     def run(self):
         while True:
-            ic_crawler = IncruitCrawler("chromedriver path")
+            ic_crawler = IncruitCrawler("/Users/nahyeonan/Downloads/chromedriver")
 
             cnt = 0
             while cnt < 1:
                 try:
+                    ic_crawler = IncruitCrawler("/Users/nahyeonan/Downloads/chromedriver")
                     self.newTotal = ic_crawler.get_resume_num()
                     cnt += 1
                 except:
@@ -31,6 +33,7 @@ class CrawlingThread(object):
                     ic_crawler.close()
 
             self.diff = self.newTotal - self.oldTotal
+            print(self.diff)
 
             if self.diff > 0:
                 letters = ic_crawler.request_letter(self.diff)
@@ -44,6 +47,8 @@ class CrawlingThread(object):
                     f = open(self.save_path + filename, "wt")
                     f.write(letters[i])
                     f.close()
+                    
+                    # subprocess.call(['scp', '-i', '"~/job4.pem"', self.save_path + filename, "ec2-user@13.124.236.54:/home/ec2-user/spooldir-ic/"])
 
             elif self.diff == 0:
                 ic_crawler.close()
@@ -65,7 +70,6 @@ class CrawlingThread(object):
 
 
 if __name__ == '__main__':
-    # usage : nohup python jkcrawlerd.py {naver id} {naver pw} {saving path} {chromedriver path}
     saving = "test/"
     crawler = CrawlingThread(saving)
 
