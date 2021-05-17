@@ -1,14 +1,14 @@
 # python
-I study PYTHON !
+I AM MAKING MY OWN REFERENCE.
 
 <br>
 
 ## 1. python 문법
-- Class
-- Module
-- Exception
-- Input/Output
-- Function Arguments : *args, **kwargs
+- Class  
+- Module  
+- Exception  
+- Input/Output  
+- Function Arguments : *args, **kwargs  
 
 <br>
 
@@ -31,33 +31,15 @@ I study PYTHON !
 <br>
 
 ## 4. Scrapy
-1. Scarpy **프로젝트 만들기**  
-```
-scrapy startproject {project name}
-```
-2. 웹에서 **데이터를 추출**하는 Spider 구현  
-```
-scrapy genspider {spider name} {url}
-```
-3. 명령행 도구를 사용해 추출된 데이터를 **저장**  
-- O : Over-write  
-- o : 기존 파일 뒤에 이어서 저장(.jl 파일로 저장하는 것이 편리함)  
-```
-scrapy crawl {spider name} -O {filename}.jl
-```
-4. **여러 개의 링크**를 이어서 크롤링하는 Spider 구현  
-5. Spider **전달인자** 사용  
-- a 속성, name=value 형태로 전달  
-```
-scrapy crawl {spider name} -a {attr.name}={attr.val}
-```
+- tutorial  
 
 <br>
 
 ## 5. Django
 - django-programming : 책 '파이썬 웹 프로그래밍'을 따라 만든 웹  
-- resful-api : rest-framework를 이용한 rest api 구축 연습  
-- social_login : allauth를 이용한 social login 개발 연습 
+- resful-api : rest-framework를 이용한 rest api 구축   
+- social_login : django-allauth를 이용한 social login  
+- ecommerce  
 
 <br>
 
@@ -71,20 +53,29 @@ scrapy crawl {spider name} -a {attr.name}={attr.val}
 
 <br>
 
-## 6-1. Keras
+## 7. Keras
+*basic*  
+- 02-mnist-image : basic MNIST 이미지 분류  
+- 03-basic-binary : imdb dataset, basic binary classification  
+- 04-basic-multiclass : reuter dataset, basic categorical classification  
+- 05-basic-regression : boston dataset, basic regression, k-fold validation  
 
 <br>
 
-## 7. PySpark
-- rdd-operations : 기본 tranformation/action rdd 연산 
+## 8. PySpark
+- 02-rdd-operations : 기본 tranformation/action rdd 연산  
+- 03-dataframe
 
 <br>
 
-## 8. python project
+## 9. python project
 - **collector**
-    - 하루에 한 번 특정 시간에 수집을 시도하는 배치형 데몬 프로그램  
+    - 하루에 한 번 특정 시간에 수집을 시도하는 프로그램  
+    - 데몬프로세스로 실행  
     - Threading, bs4, Selenium  
-    ```
-    # nohup 없이 실행하면 터미널 종료 시 프로그램도 종료됨  
-    nohup python jkcrawlerd.py &
-    ```
+- **letter-preprocess**  
+    - 전처리 spark 프로그램  
+- **letter-rating-model**  
+    - good/bad 이진 분류 모델  
+    - rating 다중 분류 모델  
+    - 텍스트 데이터 전처리 및 예측 모델링  

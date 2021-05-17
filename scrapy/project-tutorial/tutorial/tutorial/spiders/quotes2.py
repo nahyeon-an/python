@@ -1,5 +1,4 @@
 import scrapy
-# 2:02:55 부터 보기 (02_02_09)
 
 class QuotesSpider2(scrapy.Spider):
     name = 'quotes2'
