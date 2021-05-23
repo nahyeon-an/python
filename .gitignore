@@ -7,6 +7,7 @@ __pycache__/
 .vscode/
 django-ecommerce/
 test/
+img/
 db.sqlite3
 nohup.out
 jobkorea/
