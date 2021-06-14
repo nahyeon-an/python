@@ -33,7 +33,11 @@ def union(*ar):
                 setList.append(x)
     return setList
 
+def main():
+    print("run as main file")
+
 if __name__ == '__main__':
+    main()
     print("모듈을 직접 실행했다.")
 else:
     print("모듈을 임포트했다.")

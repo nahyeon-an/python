@@ -10,7 +10,7 @@ class JobKoreaCrawler:
     def __init__(self, naver_id, naver_pw, os_option, chromedriver):
         self.id = naver_id
         self.pw = naver_pw
-        self.os_option = os_option
+        # self.os_option = os_option
         self.chromedriver = chromedriver
 
         self.options = webdriver.ChromeOptions()
@@ -21,6 +21,9 @@ class JobKoreaCrawler:
         # self.driver = webdriver.Chrome(self.chromedriver)
 
         self.req_url = "https://www.jobkorea.co.kr"
+
+    def __repr__(self):
+        return 'JobKoreaCrawler (%r)' % self.chromedriver
 
     def start(self):
         """
@@ -35,28 +38,8 @@ class JobKoreaCrawler:
         self.driver.switch_to.window(self.driver.window_handles[-1])
         time.sleep(1)
 
-        # id_element = self.driver.find_element_by_id('id')
-        # id_element.click()
-        # time.sleep(1)
-        # pyperclip.copy(self.id)
-        # if self.os_option == 'm':
-        #     id_element.send_keys(Keys.COMMAND, 'v')
-        # elif self.os_option == 'w':
-        #     id_element.send_keys(Keys.CONTROL, 'v')
-        # time.sleep(1)
-
         self.driver.execute_script("document.getElementsByName('id')[0].value=\'" + self.id +"\'")
         time.sleep(1)
-
-        # pw_element = self.driver.find_element_by_id('pw')
-        # pw_element.click()
-        # time.sleep(1)
-        # pyperclip.copy(self.pw)
-        # if self.os_option == 'm':
-        #     pw_element.send_keys(Keys.COMMAND, 'v')
-        # elif self.os_option == 'w':
-        #     pw_element.send_keys(Keys.CONTROL, 'v')
-        # time.sleep(1)
 
         self.driver.execute_script("document.getElementsByName('pw')[0].value=\'" + self.pw + "\'")
 
