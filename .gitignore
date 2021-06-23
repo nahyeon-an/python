@@ -17,3 +17,4 @@ datasets/
 venv/
 *.db
 profile_pics/
+my_log_dir/
